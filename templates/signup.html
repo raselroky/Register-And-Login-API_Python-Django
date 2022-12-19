@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Register</title>
+</head>
+    
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <p>
+            <label>Username</label>
+            <input type="text" name="username">
+        </p>
+        <p>
+            <label>Email</label>
+            <input type="text" name="email">
+        </p>
+        <p>
+          <label>First Name</label>
+          <input type="text" name="firstname">
+      </p>
+      <p>
+        <label>Last Name</label>
+        <input type="text" name="lastname">
+    </p>
+    <p>
+      <label>Mobile</label>
+      <input type="text" name="mobile">
+  </p>
+  <p>
+    <label>Password</label>
+    <input type="text" name="password">
+</p>
+<p>
+  <label>Retype Password</label>
+  <input type="text" name="retype_password">
+</p>
+        <button type="submit">Register</button>
+    </form>
+</body>
+    
+</html>
