@@ -26,7 +26,9 @@ def RegisterApi(request):
         return Response({"Message":"Password Too short! try Again."})
     if(password!=retype_password):
         return Response({"Message":"Two password didn't matched ,try agian!"})
-    
+    s=str(password)
+    if(any(map(str.isdigit, s))==False or any(map(str.isalpha, s))==False):
+        return Response({"Message":"Character or Number missing ,try again!"})
     user=Register(username=username,email=email,firstname=firstname,lastname=lastname,mobile=mobile,password=password,retype_password=retype_password)
     user.save()
     return Response({'username':username,'email':email,'firstname':firstname,'lastname':lastname,'mobile':mobile,'password':password,'retype_password':retype_password})
