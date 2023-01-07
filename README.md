@@ -6,3 +6,4 @@
 * check unique username exist
 * password cross matching
 * used postgresql 
+* use postman 
